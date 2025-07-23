@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatelessWidget {
   final String title;
-  
+
   const MyHomePage({super.key, required this.title});
 
   @override
@@ -169,3 +169,35 @@ The current implementation uses Material Icons as a temporary solution until the
 - Very happy: `Icons.sentiment_very_satisfied` (green)
 
 To switch to Font Awesome icons, follow the steps above.
+
+## Local Storage Implementation
+
+The application now supports storing mood records locally when the user clicks the 'Save' button. Each record includes:
+1. The selected emoticon (integer value from 1 to 5)
+2. The entered text (can be blank)
+3. The current timestamp
+
+To enable persistent storage:
+
+1. Make sure the `shared_preferences` package is added to your `pubspec.yaml` file:
+   ```yaml
+   dependencies:
+     flutter:
+       sdk: flutter
+     flutter_localizations:
+       sdk: flutter
+     intl: ^0.20.2
+     font_awesome_flutter: ^10.6.0
+     shared_preferences: ^2.2.2
+   ```
+
+2. Run the following command to install the package:
+   ```
+   flutter pub get
+   ```
+
+3. Uncomment the shared_preferences implementation in the `MoodRecordService` class:
+   - Look for TODO comments in the `MoodRecordService` class
+   - Follow the instructions to enable persistent storage
+
+The current implementation uses in-memory storage for demonstration purposes. This means that records will be lost when the application is restarted. To enable persistent storage, follow the steps above.
