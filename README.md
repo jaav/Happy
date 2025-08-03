@@ -201,3 +201,8 @@ To enable persistent storage:
    - Follow the instructions to enable persistent storage
 
 The current implementation uses in-memory storage for demonstration purposes. This means that records will be lost when the application is restarted. To enable persistent storage, follow the steps above.
+
+Here are some random lines to prove that this is working:
+- Line 1
+- Line 2
+- Line 3
